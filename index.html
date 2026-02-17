@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo de películas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>🎬 Catálogo de películas</h1>
+
+    <section class="panel">
+      <label class="label">Título</label>
+      <input id="titleInput" type="text" placeholder="Ej: Interstellar" />
+
+      <label class="label">Año</label>
+      <input id="yearInput" type="number" placeholder="Ej: 2014" />
+
+      <div class="row">
+        <button id="addBtn" class="btn">Añadir película</button>
+        <button id="deleteBtn" class="btn">Eliminar película</button>
+        <button id="editBtn" class="btn">Editar película</button>
+      </div>
+
+      <p class="hint">
+        Nota: al inicio solo funcionará “Añadir película”. “Eliminar” y “Editar” se implementarán en ramas.
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>Lista</h2>
+      <ul id="movieList" class="list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
