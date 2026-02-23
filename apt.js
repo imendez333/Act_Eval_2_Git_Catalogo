@@ -18,11 +18,13 @@ function renderMovies() {
       </div>
       <div class="actions">
         <button class="small edt" data-action="edit">Editar</button>
+        <button class="small del" data-action="delete">Eliminar</button>
       </div>
     `;
 
 
   }
+
 
 
 function addMovie() {
@@ -37,6 +39,10 @@ function addMovie() {
   movies.push({ id: nextId++, titulo, año });
   tituloInput.value = "";
   añoInput.value = "";
+  renderMovies();
+}
+function deleteMovieById(id) {
+  movies = movies.filter(m => m.id !== id);
   renderMovies();
 }
 
@@ -83,4 +89,16 @@ movieList.addEventListener("click", (e) => {
   }
 });
 
-renderMovies();
+  const li = e.target.closest("li.item");
+  if (!li) return;
+
+  const id = Number(li.dataset.id);
+
+  if (btn.dataset.action === "delete") {
+    deleteMovieById(id);
+  }
+});
+
+renderMovies(
+  
+);
