@@ -33,17 +33,17 @@ function renderMovies() {
 }
 
 function addMovie() {
-  const title = titleInput.value.trim();
-  const year = Number(yearInput.value);
+  const titulo = tituloInput.value.trim();
+  const año = Number(añoInput.value);
 
-  if (!title || !year) {
+  if (!titulo || !año) {
     alert("Introduce título y año.");
     return;
   }
 
-  movies.push({ id: nextId++, title, year });
-  titleInput.value = "";
-  yearInput.value = "";
+  movies.push({ id: nextId++, titulo, año });
+  tituloInput.value = "";
+  añoInput.value = "";
   renderMovies();
 }
 
